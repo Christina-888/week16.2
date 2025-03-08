@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="./assets/style/style.css">
+  <link rel="shortcut icon" href="#" type="image/svg"> 
+  <title>Price calculator</title>
+</head>
+
+<body>
+  <h1>Расчёт стоимости авто</h1>
+  <form>
+    <div>
+      <label for="brand" class="form__text">Марка авто:&nbsp;&nbsp;</label>
+      <select id="brand" placeholder="Марка" required>
+        <option value="" disabled selected>Выберите марку</option>
+        <option value="brand1">Reno</option>
+        <option value="brand2">Opel</option>
+        <option value="brand4">Haval</option>
+        <option value="brand7">Subaru</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="model" class="form__text">Модель авто:&nbsp;&nbsp;</label>
+      <select id="model" placeholder="Модель" required>
+        <option value="" disabled selected>Выберите модель</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="form__text">Тип топлива:&nbsp;&nbsp;</label> <br>
+      <input type="radio" id="petrol" name="fuel" value="Бензин"> 
+      <label for="petrol">Бензин</label> <br>
+
+      <input type="radio" id="diesel" name="fuel" value="Дизель"> 
+      <label for="diesel">Дизель</label> <br>
+
+      <input type="radio" id="gas" name="fuel" value="Газ"> 
+      <label for="gas">Газ</label> <br>
+
+      <input type="radio" id="electricity" name="fuel" value="Электричество"> 
+      <label for="electricity">Электричество</label>
+    </div>  
+
+    <div>
+      <label for="volume" class="form__text">Объём двигателя в литрах</label>
+      <input type="number" id="volume" min=1.1 max=3.5 step="0.1" required>
+    </div>
+
+    <div>
+      <label class="form__text">Состояние авто:&nbsp;&nbsp;</label> <br>
+      <input type="radio" id="new" name="condition" value="Новый"> 
+      <label for="new">Новый</label> <br>
+
+      <input type="radio" id="used" name="condition" value="Подержанный"> 
+      <label for="used">Подержанный</label> <br>
+    </div>  
+
+    <div>
+      <label class="form__text">Количество владельцев:&nbsp;&nbsp;</label> <br>
+      <input type="radio" id="one-two" name="owners" value="1-2"> 
+      <label for="new">1-2</label> <br>
+
+      <input type="radio" id="three" name="owners" value=">=3"> 
+      <label for="used">3 или больше</label> <br>
+    </div>
+
+    <div>
+      <label class="form__text">Способ оплаты:&nbsp;&nbsp;</label> <br>
+      <input type="radio" id="cash" name="payment" value="Наличные"> 
+      <label for="cash">Наличные</label> <br>
+
+      <input type="radio" id="card" name="payment" value="Карта"> 
+      <label for="card">Карта</label> <br>
+
+      <input type="radio" id="invoice" name="payment" value="Счёт> 
+      <label for="invoice">Счёт на юр.лицо</label> <br>
+    </div>
+
+    <div id="result"></div>
+    </form>
+
+  <script src="./assets/script/index.js"></script>
+</body>
+</html>
